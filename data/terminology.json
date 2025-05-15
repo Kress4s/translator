@@ -1,0 +1,62 @@
+[
+  {
+    "term": "artificial intelligence",
+    "translation": "人工智能"
+  },
+  {
+    "term": "machine learning",
+    "translation": "机器学习"
+  },
+  {
+    "term": "deep learning",
+    "translation": "深度学习"
+  },
+  {
+    "term": "natural language processing",
+    "translation": "自然语言处理"
+  },
+  {
+    "term": "computer vision",
+    "translation": "计算机视觉"
+  },
+  {
+    "term": "neural network",
+    "translation": "神经网络"
+  },
+  {
+    "term": "大模型",
+    "translation": "large language model"
+  },
+  {
+    "term": "通义千问",
+    "translation": "Tongyi Qianwen"
+  },
+  {
+    "term": "阿里云",
+    "translation": "Alibaba Cloud"
+  },
+  {
+    "term": "向量数据库",
+    "translation": "vector database"
+  },
+  {
+    "term": "embedding",
+    "translation": "嵌入"
+  },
+  {
+    "term": "prompt",
+    "translation": "提示词"
+  },
+  {
+    "term": "LangChain",
+    "translation": "LangChain"
+  },
+  {
+    "term": "chain",
+    "translation": "链"
+  },
+  {
+    "term": "tool",
+    "translation": "工具"
+  }
+] 

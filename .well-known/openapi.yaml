@@ -1,0 +1,100 @@
+openapi: 3.0.1
+info:
+  title: 翻译插件API
+  description: 提供具有上下文感知和术语管理功能的翻译服务的插件。
+  version: 'v1'
+servers:
+  - url: http://localhost:8000
+paths:
+  /translate:
+    post:
+      operationId: translateText
+      summary: 使用上下文和术语支持在不同语言之间翻译文本
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TranslationRequest'
+      responses:
+        "200":
+          description: 翻译成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TranslationResponse'
+        "500":
+          description: 翻译错误
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  detail:
+                    type: string
+  /health:
+    get:
+      operationId: healthCheck
+      summary: 检查API是否正常运行
+      responses:
+        "200":
+          description: API正常运行
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "healthy"
+components:
+  schemas:
+    TranslationRequest:
+      type: object
+      required:
+        - text
+        - target_language
+      properties:
+        text:
+          type: string
+          description: 要翻译的文本
+        source_language:
+          type: string
+          description: 源语言代码（'en'表示英语，'zh'表示中文，或'auto'自动检测）
+          default: "auto"
+        target_language:
+          type: string
+          description: 目标语言代码（'en'或'zh'）
+        context:
+          type: array
+          description: 为保持上下文一致性的先前翻译
+          items:
+            type: object
+            properties:
+              source:
+                type: string
+              target:
+                type: string
+        use_terminology:
+          type: boolean
+          description: 是否使用术语数据库
+          default: true
+    TranslationResponse:
+      type: object
+      properties:
+        translated_text:
+          type: string
+          description: 翻译后的文本
+        detected_language:
+          type: string
+          description: 检测到的源语言（如果使用了自动检测）
+        terminology_matches:
+          type: array
+          description: 从术语数据库匹配的术语
+          items:
+            type: object
+            properties:
+              term:
+                type: string
+              translation:
+                type: string 

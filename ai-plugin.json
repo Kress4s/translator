@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "翻译助手",
+  "name_for_model": "translation",
+  "description_for_human": "高级翻译插件，具有术语管理和上下文保持功能，使用阿里云通义千问大模型。",
+  "description_for_model": "用于在不同语言之间翻译文本的插件，专为中英文翻译设计。包括术语库查询和上下文感知翻译功能。源语言和目标语言应指定为'en'（英语）或'zh'（中文）。可使用'auto'自动检测语言。",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:8000/.well-known/openapi.yaml"
+  },
+  "logo_url": "http://localhost:8000/.well-known/logo.png",
+  "contact_email": "{{YOUR_EMAIL}}",
+  "legal_info_url": "{{YOUR_LEGAL_INFO_URL}}"
+} 
