@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 环境变量和机密
+.env
+.env.*
+!env.example
+*.pem
+*.key
+
+# 虚拟环境
+venv/
+env/
+ENV/
+translator-env/
+translator-clean/
+.venv/
+.env/
+fresh-env/
+
+# IDE和编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 日志
+*.log
+logs/
+
+# 缓存
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+# 大模型临时文件
+.chroma/
+.langchain/
+.vectorstores/
+
+# 本地开发
+.ipynb_checkpoints/
+scratch/
+temp/
+tmp/
+
+# 模型文件和数据（如需忽略）
+# models/
+# *.bin
+# *.pt
+# *.pth
+# data/*.csv
+# data/*.json

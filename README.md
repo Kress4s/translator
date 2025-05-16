@@ -15,7 +15,7 @@
 pip install -r requirements.txt
 ```
 
-2. 在.env文件中配置阿里云通义千问API密钥：
+2. 在.env(可以重命名/复制 env.example)文件中配置阿里云通义千问API密钥：
 ```
 DASHSCOPE_API_KEY={{YOUR_DASHSCOPE_API_KEY}}
 ```
